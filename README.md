@@ -6,7 +6,7 @@
 
 ## Authors
 
-Tianyang Xue<sup>1</sup>, Lin Lu<sup>1</sup>, Yang Liu<sup>2</sup>, Mingdong Wu<sup>3</sup>, Hao Dong<sup>3</sup>, Yanbin Zhang<sup>1</sup>, Renmin Han<sup>1</sup>, Baoquan Chen<sup>3</sup>  
+Tianyang Xue<sup>1</sup>, Lin Lu<sup>1</sup>*, Yang Liu<sup>2</sup>, Mingdong Wu<sup>3</sup>, Hao Dong<sup>3</sup>, Yanbin Zhang<sup>1</sup>, Renmin Han<sup>1</sup>, Baoquan Chen<sup>3</sup>  
 <sup>1</sup>Shandong University, <sup>2</sup>Microsoft Research Asia, <sup>3</sup>Peking University
 
 
@@ -16,10 +16,8 @@ Tianyang Xue<sup>1</sup>, Lin Lu<sup>1</sup>, Yang Liu<sup>2</sup>, Mingdong Wu<
 
 2D irregular packing is a classic combinatorial optimization problem with various applications, such as material utilization and texture atlas generation. Due to its NP-hard nature, conventional numerical approaches typically encounter slow convergence and high computational costs. Previous research (GFPack) introduced a generative method for gradient-based packing, providing early evidence of its feasibility but faced limitations such as insufficient rotation support, poor boundary adaptability, and high overlap ratios. In this paper, we propose **GFPack++**, a deeply investigated framework that adopts attention-based geometry and relation encoding, enabling more comprehensive modeling of complex packing relationships. We further design a constrained gradient and a weighting function to enhance both the feasibility of the produced solutions and the learning effectiveness. Experimental results on multiple datasets demonstrate that GFPack++ achieves higher space utilization, supports continuous rotation, generalizes well to arbitrary boundaries, and infers orders of magnitude faster than previous approaches.
 
-This repository accompanies the ICCV 2025 paper **GFPack++: Attention-Driven Gradient Fields for Optimizing 2D Irregular Packing**, the next generation of the GFPack framework.  The code base provides training, evaluation, and sampling utilities for our attention-enhanced score model that learns packing gradients directly from teacher demonstrations.
-The repository is organised so the Python sources live under `src/`, shell
-entry-points under `scripts/`, and binary extensions / datasets under dedicated
-folders.  
+This repository accompanies the ICCV 2025 paper **GFPack++: Attention-Driven Gradient Fields for Optimizing 2D Irregular Packing**. The code base provides training, evaluation, and sampling utilities for our attention-enhanced score model that learns packing gradients directly from teacher demonstrations.
+The repository is organised so the Python sources live under `src/`, shell entry-points under `scripts/`, and binary extensions / datasets under dedicated folders.  
 The current release merges the collision potential field and gap-removal enhancement so both operate together during sampling.  In our experiments this behaves comparably to the original implementation where the collision field is applied separately from the inference update, while being more efficient because the fused formulation reuses the same intermediate computations.
 
 ## Directory Layout
