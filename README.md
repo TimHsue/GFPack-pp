@@ -144,4 +144,10 @@ If you find this project useful, please cite our ICCV 2025 paper:
   booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
   year      = {2025}
 }
+@inproceedings{Xue2023GFPack,
+title = {Learning Gradient Fields for Scalable and Generalizable Irregular Packing},
+author = {Xue, Tianyang and Wu, Mingdong and Lu, Lin and Wang, Haoxuan and Dong, Hao and Chen, Baoquan},
+booktitle = {SIGGRAPH Asia 2023 Conference Papers},
+year = {2023},
+}
 ```
