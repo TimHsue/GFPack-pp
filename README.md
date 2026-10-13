@@ -88,6 +88,18 @@ cp calutil*.so rmspacing*.so ../../src/
   have an archive, extract it so every file is available at:
   `data/polygons/<poly_id>.txt`.
 
+### Puzzle generation
+
+Generate 16 rectangular puzzles with 16 pieces each:
+
+```bash
+python scripts/genPuzzle.py --rect 1 --cut 15 --datasize 16 \
+  --output data/datasets/puzzle_rect.pkl
+```
+
+See [puzzle generation](docs/puzzle_generation.md) for boundary input, output
+format, reproducibility, and retry limits.
+
 ## 4. Training
 
 `scripts/train.sh` wraps `torchrun` and always executes from the project root.
